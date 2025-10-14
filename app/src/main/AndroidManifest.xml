@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodShop">
         <activity
+            android:name=".ui.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MenuShopActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
