@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.foodshop.ui.MenuShopActivity
+import com.example.foodshop.utils.Constants
 
 class MainActivity : AppCompatActivity() {
     private lateinit var username: EditText
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonLogin.setOnClickListener {
             intent = Intent(this@MainActivity, MenuShopActivity::class.java)
+            intent.putExtra(Constants.USERNAME, username.text.toString())
             startActivity(intent)
             finish()
         }

@@ -11,9 +11,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="10dp"
         android:padding="15dp">
         <TextView
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Xin chao, dovan"
@@ -49,57 +50,12 @@
         android:layout_height="match_parent"
         >
         <LinearLayout
+            android:id="@+id/ll_food_categories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Món chính"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="?attr/colorPrimary"
-                android:layout_marginBottom="8dp"/>
 
-            <!-- Ví dụ Món 1 -->
-            <include layout="@layout/item_food_card" />
-
-            <!-- Ví dụ Món 2 -->
-            <include layout="@layout/item_food_card" />
-
-
-            <!-- === MÓN PHỤ === -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Món phụ"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="?attr/colorPrimary"
-                android:layout_marginBottom="8dp"/>
-
-            <!-- Ví dụ Món 1 -->
-            <include layout="@layout/item_food_card" />
-
-            <!-- Ví dụ Món 2 -->
-            <include layout="@layout/item_food_card" />
-
-            <!-- === TRÁNG MIỆNG === -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tráng miệng"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="?attr/colorPrimary"
-                android:layout_marginBottom="8dp"/>
-
-            <!-- Ví dụ Món 1 -->
-            <include layout="@layout/item_food_card" />
-
-            <!-- Ví dụ Món 2 -->
-            <include layout="@layout/item_food_card" />
 
         </LinearLayout>
     </ScrollView>
