@@ -44,20 +44,22 @@
                 android:textStyle="bold"/>
         </FrameLayout>
     </FrameLayout>
-    
-    <ScrollView
+
+    <!-- THAY THẾ CHO SCROLLVIEW: BỘ ĐÔI TABLAYOUT VÀ VIEWPAGER2 -->
+
+    <!-- 1. Thanh Tab để chọn danh mục -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <LinearLayout
-            android:id="@+id/ll_food_categories"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
 
-
-        </LinearLayout>
-    </ScrollView>
+    <!-- 2. Vùng chứa để hiển thị các Fragment, cho phép lướt qua lại -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

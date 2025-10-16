@@ -1,8 +1,10 @@
 package com.example.foodshop.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,10 +33,24 @@ class CartActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
 
         toolbar.setNavigationOnClickListener {
+            Intent(this, MenuShopActivity::class.java).also {
+                startActivity(it)
+            }
             finish()
         }
         setupRecyclerView()
         updateTotalPrice()
+
+        btnCheckout.setOnClickListener {
+            Toast.makeText(this,"Thanh toán thành công ${CartManager.getTotalPrice()}", Toast.LENGTH_SHORT).show()
+            CartManager.clearCart()
+            setupRecyclerView()
+            updateTotalPrice()
+            Intent(this, CartActivity::class.java).also {
+                startActivity(it)
+                finish()
+            }
+        }
     }
 
     private fun setupRecyclerView(){
